@@ -39,4 +39,4 @@
   * укажем сертификат для подписания: `$cert = Get-PfxCertificate -FilePath C:\Cert\localhost.pfx`
   * какой скрипт нужно подписать: `$file = "C:\Scripts\superscript.ps1"`
   * подписываем: `Set-AuthenticodeSignature $file $cert`
-* ##### P.S. К СОЖАЛЕНИЮ ЗАЩИТА ОТ СКРИПТОВ ЛЕГКО ОБХОДИТСЯ -> `powershell -ExecutionPolicy ByPass -File hack_file.ps1`
+* ##### P.S. ЗАЩИТА ОТ СКРИПТОВ ЛЕГКО ОБХОДИТСЯ -> `powershell -ExecutionPolicy ByPass -File hack_file.ps1`, поэтому её нужно использовать ТОЛЬКО с другими политиками.
