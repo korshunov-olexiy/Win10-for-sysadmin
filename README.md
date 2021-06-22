@@ -32,7 +32,7 @@
 ### Создаем сертификат и подписываем им свои скрипты:
 * #### Создаем собственный цифровой сертификат:
   * открываем `powershell` под администратором
-  * создаем сертификат: `$cert = New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -Subject "CN=Local Code Signing" -KeyAlgorithm RSA -KeyLength 2048 -Provider 'Microsoft Enhanced RSA and AES Cryptographic Provider' -KeyExportPolicy Exportable -KeyUsage DigitalSignatur e -Type CodeSigningCert`
+  * создаем сертификат: `$cert = New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -Subject "CN=Local Code Signing" -KeyAlgorithm RSA -KeyLength 2048 -Provider 'Microsoft Enhanced RSA and AES Cryptographic Provider' -KeyExportPolicy Exportable -KeyUsage DigitalSignature -Type CodeSigningCert`
   * открываем консоль управления сертификатами - `certmgr /s my`
   * копируем созданный сертификат из `"Личное"`->`"Сертификаты"` в `"Доверенные корневые центры сертификации"`->`"Сертификаты"`
   * Экспортируем сертификат в формат `*.pfx` - нажать на только что созданном сертификате и выбрать экспорт (обязательно указать пароль для доступа к сертификату)
