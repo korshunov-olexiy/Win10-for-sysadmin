@@ -35,7 +35,7 @@
   * создаем сертификат: `$cert = New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my -Subject "CN=Local Code Signing" -KeyAlgorithm RSA -KeyLength 2048 -Provider 'Microsoft Enhanced RSA and AES Cryptographic Provider' -KeyExportPolicy Exportable -KeyUsage DigitalSignature -Type CodeSigningCert`
   * открываем консоль управления сертификатами - `certmgr /s my`
   * копируем созданный сертификат из `"Личное"`->`"Сертификаты"` в `"Доверенные корневые центры сертификации"`->`"Сертификаты"`
-  * Экспортируем сертификат в формат `*.pfx` - нажать на только что созданном сертификате и выбрать экспорт (обязательно указать пароль для доступа к сертификату)
+  * Экспортируем сертификат в формат `*.pfx` - жмем правой кнопкой мышки на созданном сертификате и выбираем экспорт (обязательно указываем пароль для доступа к сертификату)
 * #### Подписываем наши скрипты ps1 своим сертификатом:
   * укажем сертификат для подписания: `$cert = Get-PfxCertificate -FilePath C:\Cert\localhost.pfx`
   * какой скрипт нужно подписать: `$file = "C:\Scripts\superscript.ps1"`
